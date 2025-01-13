@@ -1,0 +1,34 @@
+* {
+    /* Reset box sizing for later not calculate margin */
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins san serif" ;
+}
+.content {
+    width: 1110px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Header */
+.header {
+    background: #E6F0FF;
+    /* Cause the height can be changed based on the user screen */
+    height: 100vh;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+}
+.navbar ul {
+    display: flex;
+}
+.navbar .actions{
+    margin-left: auto;
+}
