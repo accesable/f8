@@ -2,6 +2,10 @@
     /* Reset box sizing for later not calculate margin */
     box-sizing: border-box;
 }
+/* root is the same with html but this case use root for varible naming for more organize */
+:root{
+    --primary-color :#0F1B4C
+}
 
 html {
     font-size: 62.5%;
@@ -9,12 +13,34 @@ html {
 
 body {
     font-size: 1.6rem;
-    font-family: "Poppins san serif" ;
+    font-family: "Poppins",sans-serif ;
 }
+/* Commom */
 .content {
     width: 1110px;
+    /* This for prevent the screen which have smaller width to ensure the content have 24px margin at both sides */
+    max-width: calc(100% - 48px);
     margin-left: auto;
     margin-right: auto;
+}
+a {
+    text-decoration: none;
+}
+.btn {
+    display: inline-block;
+    /* Register */
+    min-width: 98px;
+    border-radius: 8px;
+    /* opacity: 0px; */
+    background: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 18px 16px;
+}
+.btn:hover{
+    opacity: 0.7;
 }
 /* Header */
 .header {
@@ -23,12 +49,94 @@ body {
     height: 100vh;
 }
 .navbar{
+    /* Using Margin Top could result in margin collapse */
+    padding-top: 38px;
     display: flex;
     align-items: center;
 }
 .navbar ul {
+    margin-left: 50px;
     display: flex;
 }
 .navbar .actions{
     margin-left: auto;
+}
+.navbar ul a{
+    font-size: 1.4rem;
+    font-weight: 500;
+    /* line-height: 21px;
+    text-align: left; */
+    color : #4F5361;
+    padding: 9px 15px;
+
+}
+/* Add hover for a link */
+.navbar ul a:hover {
+    text-decoration: underline;
+}
+.navbar .action-link{
+    /* Sign up */
+    font-weight: 500;
+    font-size: 1.4rem;
+    /* identical to box height */
+    color: var(--primary-color);
+
+}
+.navbar .action-btn{
+    padding: 13px 16px;
+    margin-left: 18px;
+}
+.hero{
+    margin-top: 130px;
+}
+.info h1 {
+    /* Discover a place you'll love to live. */
+    width: 559px;
+    height: 152px;
+
+    font-weight: 700;
+    font-size: 64px;
+    /* line-height: 76px; */
+    /* or 119% */
+    color: #000336;
+}
+.info p {
+    /* Welcome to Besnik Agency */
+    width: 250px;
+    height: 27px;
+    font-weight: 500;
+    font-size: 1.8rem;
+    /* line-height: 27px; */
+    /* identical to box height */
+    letter-spacing: 0.01em;
+
+    color: #687691;
+}
+.info .desc{
+/* get the best real estate deals first, before they hit the mass market! HOT FORECLOSURE DEALS with one simple search */
+    width: 550px;
+    height: 64px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    /* or 178% */
+    text-transform: lowercase;
+
+    color: #5A6473;
+    margin-bottom: 40px;
+}
+.info .btn a{
+    width: 95px;
+    height: 20px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 19.5px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    
+    color: #FFFFFF;
+}
+.info .btn{
+    padding: 18px 38px;
 }
